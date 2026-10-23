@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBBS Pathology Question Tracker</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f6fa;color:#1d2736;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+header{background:#1f477d;color:white;padding:22px 16px}header h1{margin:0;font-size:1.5rem}header p{margin:5px 0 0;color:#e5edfb}
+main{max-width:900px;margin:16px auto;padding:0 12px 30px}.panel,.topic{background:white;border:1px solid #dce3ec;border-radius:12px;margin-bottom:12px;overflow:hidden}
+.panel{padding:15px;box-shadow:0 3px 12px #182d4a12}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.count{font-weight:750;font-size:1.08rem}.muted{color:#66758a;font-size:.88rem}
+progress{width:100%;height:13px;margin:10px 0;accent-color:#23845b}
+button{border:1px solid #cbd5e1;border-radius:8px;background:white;padding:8px 11px;font:inherit;cursor:pointer}button:active{transform:scale(.98)}.reset{color:#a52222;border-color:#e6b7b7}
+.topic h2{font-size:1.05rem;margin:0;padding:13px 14px;background:#edf3fc;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.topic h2 button{font-size:.82rem;padding:5px 9px;flex-shrink:0}.topicbody{padding:0 14px}
+.question{display:flex;gap:10px;padding:13px 0;border-bottom:1px solid #edf0f4;align-items:flex-start}.question:last-child{border-bottom:0}.question input{width:20px;height:20px;margin-top:3px;flex:0 0 auto;accent-color:#23845b}.qtext{flex:1;cursor:pointer}.question.done .qtext{text-decoration:line-through;color:#7a8797}.year{display:block;font-size:.84rem;color:#5e6d80;margin-top:3px}.empty{padding:12px 0;color:#66758a;font-style:italic}.topicprogress{font-size:.82rem;color:#53647a;font-weight:500;white-space:nowrap}footer{font-size:.86rem;color:#657287;padding:8px 2px}
+@media(max-width:520px){header h1{font-size:1.25rem}.topic h2{align-items:flex-start}.row.actions{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<header><h1>MBBS Pathology — Question Tracker</h1><p>Vascular disturbances · DU past questions</p></header>
+<main>
+<section class="panel">
+ <div class="row"><div><div class="count" id="totalText">0 of 39 questions completed</div><div class="muted" id="pctText">0% complete</div></div>
+ <div class="row actions"><button type="button" id="openAll">Expand all</button><button type="button" id="closeAll">Collapse all</button><button type="button" class="reset" id="reset">Reset progress</button></div></div>
+ <progress id="progress" value="0" max="100" aria-label="Overall progress"></progress>
+ <div class="muted" id="saveText">Progress updates automatically. Saving status will appear here.</div>
+</section>
+<div id="content">
+<!-- Every question is included in the HTML itself. -->
+<section class="topic">
+<h2><span>1. Edema <span class="topicprogress">0/7</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody">
+<div class="question"><input type="checkbox" id="q0"><label class="qtext" for="q0">Define edema / What do you mean by edema?<span class="year">Exam: DU-14Ja, DU-08Ju, DU-07Ja, DU-06S</span></label></div>
+<div class="question"><input type="checkbox" id="q1"><label class="qtext" for="q1">Define edema and state the pathophysiologic categories of edema.<span class="year">Exam: DU-16Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q2"><label class="qtext" for="q2">Explain the mechanism of edema in nephrotic syndrome.<span class="year">Exam: DU-16Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q3"><label class="qtext" for="q3">Write the mechanism of edema in nephritic syndrome. What is anasarca?<span class="year">Exam: DU-14Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q4"><label class="qtext" for="q4">Classify edema.<span class="year">Exam: DU-07Ja, DU-06S</span></label></div>
+<div class="question"><input type="checkbox" id="q5"><label class="qtext" for="q5">Give, in brief, the mechanisms of edema formation.<span class="year">Exam: DU-08Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q6"><label class="qtext" for="q6">How does edema develop due to cardiac failure? / Discuss the mechanism of edema in heart failure.<span class="year">Exam: DU-07Ju, DU-07Ja</span></label></div>
+</div></section>
+<section class="topic"><h2><span>2. Hyperemia <span class="topicprogress">0/0</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody"><div class="empty">No questions for this topic were included in the supplied text.</div></div></section>
+<section class="topic"><h2><span>3. Congestion <span class="topicprogress">0/0</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody"><div class="empty">No questions for this topic were included in the supplied text.</div></div></section>
+<section class="topic"><h2><span>4. Hemorrhage <span class="topicprogress">0/0</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody"><div class="empty">No separate hemorrhage questions were included in the supplied text.</div></div></section>
+<section class="topic">
+<h2><span>5. Hemostasis and Thrombosis <span class="topicprogress">0/11</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody">
+<div class="question"><input type="checkbox" id="q7"><label class="qtext" for="q7">Describe briefly the role of platelets in normal hemostasis.<span class="year">Exam: DU-04M</span></label></div>
+<div class="question"><input type="checkbox" id="q8"><label class="qtext" for="q8">What are the antithrombotic properties of endothelial cells?<span class="year">Exam: DU-07Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q9"><label class="qtext" for="q9">What is thrombosis?<span class="year">Exam: DU-17M, DU-11Ju, DU-09Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q10"><label class="qtext" for="q10">Discuss briefly the role of endothelial injury in thrombus formation.<span class="year">Exam: DU-10Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q11"><label class="qtext" for="q11">Write down the prothrombotic role of endothelium in thrombus formation.<span class="year">Exam: DU-10Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q12"><label class="qtext" for="q12">How does altered blood flow cause thrombosis?<span class="year">Exam: DU-17M</span></label></div>
+<div class="question"><input type="checkbox" id="q13"><label class="qtext" for="q13">Write down the pathogenesis of venous thrombus.<span class="year">Exam: DU-16Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q14"><label class="qtext" for="q14">What is Virchow’s triad of thrombogenesis? / Write a short note on Virchow’s triad in thrombosis.<span class="year">Exam: DU-26/18M, DU-24/23N, DU-22N, DU-21/19M, DU-14Ju, DU-13Ja, DU-17Nov</span></label></div>
+<div class="question"><input type="checkbox" id="q15"><label class="qtext" for="q15">Explain how endothelial injury and changes in blood flow lead to thrombus formation.<span class="year">Exam: DU-18M</span></label></div>
+<div class="question"><input type="checkbox" id="q16"><label class="qtext" for="q16">Mention the causes of hypercoagulability of blood.<span class="year">Exam: DU-26M</span></label></div>
+<div class="question"><input type="checkbox" id="q17"><label class="qtext" for="q17">Give the fate of a thrombus.<span class="year">Exam: DU-07Ju</span></label></div>
+</div></section>
+<section class="topic">
+<h2><span>6. Embolism <span class="topicprogress">0/7</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody">
+<div class="question"><input type="checkbox" id="q18"><label class="qtext" for="q18">Classify emboli on the basis of their composition.<span class="year">Exam: DU-03S</span></label></div>
+<div class="question"><input type="checkbox" id="q19"><label class="qtext" for="q19">Write, in short, the pathogenesis and effects of systemic embolism.<span class="year">Exam: DU-04M</span></label></div>
+<div class="question"><input type="checkbox" id="q20"><label class="qtext" for="q20">Write a short note on embolism / emboli.<span class="year">Exam: DU-19Nov, DU-18Nov</span></label></div>
+<div class="question"><input type="checkbox" id="q21"><label class="qtext" for="q21">Write a short note on pulmonary embolism.<span class="year">Exam: DU-08Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q22"><label class="qtext" for="q22">Write a short note on fat embolism.<span class="year">Exam: DU-05S</span></label></div>
+<div class="question"><input type="checkbox" id="q23"><label class="qtext" for="q23">Write a short note on air embolism.<span class="year">Exam: DU-16Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q24"><label class="qtext" for="q24">A 38-year-old male was hospitalized for femoral fractures. Two weeks after admission, he suddenly developed chest pain, cough and haemoptysis. What is the most likely diagnosis? What is the cause of this complication?<span class="year">Exam: DU-16Ju</span></label></div>
+</div></section>
+<section class="topic">
+<h2><span>7. Infarction <span class="topicprogress">0/4</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody">
+<div class="question"><input type="checkbox" id="q25"><label class="qtext" for="q25">What are the factors that influence the formation of an infarct?<span class="year">Exam: DU-16/12Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q26"><label class="qtext" for="q26">Write a short note on red infarct.<span class="year">Exam: DU-25/22M</span></label></div>
+<div class="question"><input type="checkbox" id="q27"><label class="qtext" for="q27">Write a short note on red and white infarcts.<span class="year">Exam: DU-17/15Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q28"><label class="qtext" for="q28">What types of infarct are seen in the heart and lungs?<span class="year">Exam: DU-12Ju</span></label></div>
+</div></section>
+<section class="topic">
+<h2><span>8. Shock <span class="topicprogress">0/10</span></span><button type="button" class="toggle">Collapse</button></h2><div class="topicbody">
+<div class="question"><input type="checkbox" id="q29"><label class="qtext" for="q29">Define shock.<span class="year">Exam: DU-25N, DU-20Nov/July, DU-09Ju, DU-08Ju, DU-07Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q30"><label class="qtext" for="q30">What are the types of shock?<span class="year">Exam: DU-20Nov/July</span></label></div>
+<div class="question"><input type="checkbox" id="q31"><label class="qtext" for="q31">What is anaphylactic shock?<span class="year">Exam: DU-15Ja</span></label></div>
+<div class="question"><input type="checkbox" id="q32"><label class="qtext" for="q32">Name the stages of shock.<span class="year">Exam: DU-25N, DU-15Ja, DU-10Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q33"><label class="qtext" for="q33">Write a short note on hemorrhagic shock.<span class="year">Exam: DU-20Nov/July</span></label></div>
+<div class="question"><input type="checkbox" id="q34"><label class="qtext" for="q34">Write the mechanism of septic shock.<span class="year">Exam: DU-08Ju, DU-07Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q35"><label class="qtext" for="q35">Write down the pathogenesis of septic shock.<span class="year">Exam: DU-25N, DU-20Nov/July, DU-13Ju, DU-09Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q36"><label class="qtext" for="q36">Discuss the pathophysiology of severe hemorrhage after a road traffic accident (RTA).<span class="year">Exam: DU-10Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q37"><label class="qtext" for="q37">Write a short note on the stages of shock.<span class="year">Exam: DU-16Ju</span></label></div>
+<div class="question"><input type="checkbox" id="q38"><label class="qtext" for="q38">PBQ: A 40-year-old male presented with loss of consciousness and cold, clammy skin following severe bleeding due to RTA. What is the probable diagnosis? What complications may occur in this case?<span class="year">Exam: DU-25M</span></label></div>
+</div></section>
+</div>
+<footer>All 39 questions are embedded in this file. Checkboxes and controls use JavaScript. If local storage is blocked by the app used to open the file, progress may not persist after closing.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+var boxes = Array.prototype.slice.call(document.querySelectorAll('.question input[type="checkbox"]'));
+var storageKey = 'mbbs_pathology_tracker_v3';
+var topics = Array.prototype.slice.call(document.querySelectorAll('.topic'));
+var saveText = document.getElementById('saveText');
+function update(){
+ var done = boxes.filter(function(b){return b.checked;}).length;
+ var pct = boxes.length ? Math.round(done/boxes.length*100) : 0;
+ document.getElementById('totalText').textContent = done + ' of ' + boxes.length + ' questions completed';
+ document.getElementById('pctText').textContent = pct + '% complete';
+ document.getElementById('progress').value = pct;
+ topics.forEach(function(topic){
+   var qs = Array.prototype.slice.call(topic.querySelectorAll('.question input'));
+   var n = qs.filter(function(b){return b.checked;}).length;
+   var label = topic.querySelector('.topicprogress');
+   if(label) label.textContent = n + '/' + qs.length;
+ });
+ try { window.localStorage.setItem(storageKey, JSON.stringify(boxes.map(function(b){return b.checked;}))); saveText.textContent='Progress saved automatically in this browser.'; }
+ catch(err){ saveText.textContent='Progress updates, but this browser/viewer blocks saving between sessions.'; }
+}
+try {
+ var saved = window.localStorage.getItem(storageKey);
+ if(saved){var states=JSON.parse(saved);if(Array.isArray(states)){boxes.forEach(function(b,i){b.checked=!!states[i];});}}
+} catch(err) { saveText.textContent='Progress can update now, but browser storage may be unavailable.'; }
+boxes.forEach(function(box){box.addEventListener('change',update);});
+function setTopic(topic,open){
+ var body=topic.querySelector('.topicbody');
+ var btn=topic.querySelector('.toggle');
+ body.hidden=!open;
+ btn.textContent=open?'Collapse':'Expand';
+}
+topics.forEach(function(topic){
+ var btn=topic.querySelector('.toggle');
+ btn.addEventListener('click',function(){setTopic(topic,topic.querySelector('.topicbody').hidden);});
+ setTopic(topic,true);
+});
+document.getElementById('openAll').addEventListener('click',function(){topics.forEach(function(t){setTopic(t,true);});});
+document.getElementById('closeAll').addEventListener('click',function(){topics.forEach(function(t){setTopic(t,false);});});
+document.getElementById('reset').addEventListener('click',function(){
+ if(window.confirm('Reset all checkboxes and progress? This cannot be undone.')){
+   boxes.forEach(function(b){b.checked=false;});update();
+ }
+});
+update();
+})();
+</script>
+</body>
+</html>
